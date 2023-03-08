@@ -570,7 +570,7 @@ body {
   -webkit-appearance: none;
   height: 11px;
   width: 5px;
-  background-color: rgb(102, 77, 77);
+  background-color: rgb(255, 255, 255);
   border-radius: 6px;
 }
 .player-volume-progressbar-progress{
