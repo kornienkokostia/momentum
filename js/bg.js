@@ -9,8 +9,8 @@ const setBg = () => {
     img.src = `https://raw.githubusercontent.com/kornienkokostia/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.webp`
     img.addEventListener('load', () => {
         document.body.style.backgroundImage = `url(${img.src})`
-        document.querySelector('.preloader').classList.toggle('hidden')
-        document.querySelector('.ispinner').classList.toggle('hidden')
+        document.querySelector('.preloader').classList.add('hidden')
+        document.querySelector('.ispinner').classList.add('hidden')
     }) 
 } 
 
