@@ -10,14 +10,14 @@ const setFlickrApiBg = async () => {
         img.src = link
         img.addEventListener('load', () => {
             document.body.style.backgroundImage = `url(${img.src})`
-            document.querySelector('.preloader').classList.toggle('hidden')
-            document.querySelector('.ispinner').classList.toggle('hidden')
+            document.querySelector('.preloader').classList.add('hidden')
+            document.querySelector('.ispinner').classList.add('hidden')
         })
     } catch(err) {
         console.log(err)
         if (apiBgCategoryInput.value !== '') {apiBgCategorError.classList.add('show-error')}
-        document.querySelector('.preloader').classList.toggle('hidden')
-        document.querySelector('.ispinner').classList.toggle('hidden')
+        document.querySelector('.preloader').classList.add('hidden')
+        document.querySelector('.ispinner').classList.add('hidden')
     }
 }
 
@@ -30,18 +30,14 @@ const setUnsplashApiBg = async () => {
         img.src = link
         img.addEventListener('load', () => {
             document.body.style.backgroundImage = `url(${img.src})`
-            document.querySelector('.preloader').style.visibility = 'hidden'
-            document.querySelector('.preloader').style.opacity = '0'
-            document.querySelector('.ispinner').style.visibility = 'hidden'
-            document.querySelector('.ispinner').style.opacity = '0'
+            document.querySelector('.preloader').classList.add('hidden')
+            document.querySelector('.ispinner').classList.add('hidden')
         })
     } catch(err) {
         console.log(err)
         if (apiBgCategoryInput.value !== '') {apiBgCategorError.classList.add('show-error')}
-        document.querySelector('.preloader').style.visibility = 'hidden'
-        document.querySelector('.preloader').style.opacity = '0'
-        document.querySelector('.ispinner').style.visibility = 'hidden'
-        document.querySelector('.ispinner').style.opacity = '0'
+        document.querySelector('.preloader').classList.add('hidden')
+        document.querySelector('.ispinner').classList.add('hidden')
     }
 }
 
