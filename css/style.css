@@ -564,14 +564,14 @@ body {
   -webkit-appearance: none;
   height: 11px;
   width: 5px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(102, 77, 77);
   border-radius: 6px;
 }
 .player-volume-progressbar-progress{
   position: absolute;
   height: 3px;
   width: 41px;
-  accent-color: rgba(255, 255, 255, 1);
+  accent-color: rgb(107, 85, 85);
   border-radius: 5px;
 }
 .player-volume-progressbar-progress::-webkit-progress-bar{
@@ -1267,13 +1267,7 @@ body {
   color: #f5f5f7;
   padding-right: 10px;
 }
-.setting-parameter{
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  transition: .3s linear;
-}
-.settings-option{
+.language{
   height: 30px;
   font-size: 20px;
   font-family: SF-Pro-Display-Medium;
@@ -1283,10 +1277,10 @@ body {
   border: 1px solid rgb(116, 116, 116);
   background-color: #f5f5f7;
 }
-.settings-option>option{
+.language>option{
   background-color: #f5f5f7;
 }
-.languages{
+.language{
   width: 120px;
 }
 .background-sources{
