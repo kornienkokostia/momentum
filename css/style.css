@@ -304,11 +304,11 @@ body {
   z-index: 30;
   visibility: visible;
   opacity: 1;
-  transition: .5s linear;
 }
-.hide-preloader{
+.preloader.hidden{
   visibility: hidden;
   opacity: 0;
+  transition: .5s linear;
 }
 .ispinner {
   width: 35px;
@@ -316,6 +316,11 @@ body {
   visibility: visible;
   opacity: 1;
   transition: .1s linear;
+}
+.ispinner.hidden{
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s linear;
 }
 .ispinner .ispinner-blade {
   position: absolute;
@@ -555,6 +560,7 @@ body {
   height: 3px;
   width: 41px;
   -webkit-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-radius: 2.5px;
   z-index: 1;
@@ -1266,6 +1272,17 @@ body {
   font-family: SF-Pro-Display-Semibold;
   color: #f5f5f7;
   padding-right: 10px;
+}
+.settings-option{
+  height: 30px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: SF-Pro-Display-Medium;
+  outline: none;
+}
+.setting-parameter{
+  display: flex;
+  position: relative;
 }
 .language{
   height: 30px;
