@@ -11,16 +11,21 @@ const setBg = () => {
         document.body.style.backgroundImage = `url(${img.src})`
         document.querySelector('.preloader').classList.add('hidden')
         document.querySelector('.ispinner').classList.add('hidden')
-    }) 
-} 
+    })
+    img.addEventListener('error', () => {
+        document.querySelector('.preloader').classList.add('hidden')
+        document.querySelector('.ispinner').classList.add('hidden')
+    })
+
+}
 
 const getSlideNext = () => {
-    randomNum <= 19 ? randomNum ++ : randomNum = 1
+    randomNum <= 19 ? randomNum++ : randomNum = 1
     setBg()
 }
 
 const getSlidePrev = () => {
-    randomNum > 1 ? randomNum -- : randomNum = 20
+    randomNum > 1 ? randomNum-- : randomNum = 20
     setBg()
 }
 
@@ -28,4 +33,4 @@ let randomNum = getRandomNum()
 const slideNext = document.querySelector('.slide-next')
 const slidePrev = document.querySelector('.slide-prev')
 
-export {setBg, getSlideNext, getSlidePrev, slideNext, slidePrev}
+export { setBg, getSlideNext, getSlidePrev, slideNext, slidePrev }
