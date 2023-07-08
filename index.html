@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/svg/favicon.svg" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Momentum</title>
+</head>
+<body>
+  <div class="preloader">
+    <div class="ispinner gray animating">
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+      <div class="ispinner-blade"></div>
+    </div>
+  </div>
+  <div class="blur"></div>
+  <header class="header">
+    <div class="player">
+      <div class="player-header">
+        <div class="player-header-song-cover"></div>
+        <div class="player-header-main">
+          <div class="player-header-song-info-block">
+            <div class="player-header-song-title-block">
+              <div class="player-header-song-title"></div>
+              <div class="player-header-song-explicit"></div>
+            </div>
+            <div class="player-header-song-artist"></div>
+          </div>
+          <div class="player-progress-bar">
+            <div class="progress-bar-scale">
+              <div class="progress-bar-scale-el progress-bar-back"></div>
+              <div class="progress-bar-scale-el progress-bar-front"></div>
+              <div class="progress-bar-bubble">
+                <div class="progress-bar-bubble-containter"></div>
+              </div>
+            </div>
+            <div class="progress-bar-time-block">
+              <div class="progress-bar-time current-time">0:00</div>
+              <div class="progress-bar-time end-time"></div>
+            </div>
+          </div>
+          <div class="player-controls">
+            <button class="player-button play-prev"><img src="./assets/svg/music-prev.svg" alt="music-prev" class="music-icon" draggable="false"></button>
+            <button class="player-button play"><img src="./assets/svg/music-play.svg" alt="music-play" class="music-icon" draggable="false"></button>
+            <button class="player-button pause"><img src="./assets/svg/music-pause.svg" alt="music-pause" class="music-icon" draggable="false"></button>
+            <button class="player-button play-next"><img src="./assets/svg/music-next.svg" alt="music-next" class="music-icon" draggable="false"></button>
+          </div>
+        </div>
+        <div class="player-right-panel">
+          <div class="player-volume-control">
+            <div class="player-volume-pic"><img src="./assets/svg/volume-max.svg" alt="volume-max" class="volume-img" draggable="false"></div>
+            <div class="player-volume-slider">
+              <input type="range" class="player-volume-progressbar-range" name="player-progress-bar" min="0" max="100" value="100" step="1">
+              <progress class="player-volume-progressbar-progress" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+          <button class="close-open-playlist-button"><img src="./assets/svg/open-close-playlist.svg" alt="close-btn" class="close-open-playlist-button-icon" draggable="false"></button>
+        </div>
+      </div>
+      <div class="play-list">
+        <div class="song-separator">o</div>
+      </div>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" maxlength="22"/>
+      <div class="weather-error"></div>
+      <div class="weather-info">
+        <span class="temperature"></span>
+        <div class="weather-wrap">
+          <div class="weather-icon"></div>
+          <div class="weather-description"></div>
+        </div>
+      </div>
+      <div class="description-container">
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time">
+      <div class="hours"></div><span class="dots"></span>
+      <div class="minutes"></div><span class="dots"></span>
+      <div class="seconds"></div>
+    </time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" maxlength="20"/>
+      <div class='name-holder'></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="todo-list">
+      <div class="todo-list-header">
+        <img src="./assets/svg/todo-list-header-icon.svg" alt="todo-list-header-icon" class="todo-list-header-icon" draggable="false">
+        <span class="todo-list-header-text">Todo list</span>
+        <button class="add-todo-list-item-btn list-item-btn"><img src="./assets/svg/add-todo-item.svg" alt="add-todo-item" class="add-todo-list-item-btn-img" draggable="false"></button>
+        <button class="remove-todo-list-item-btn list-item-btn"><img src="./assets/svg/remove-todo-item-turned-off.svg" alt="remove-todo-item" class="remove-todo-list-item-btn-img" draggable="false"></button>
+      </div>
+      <div class="todo-list-separator"></div>
+      <div class="todo-list-main">
+      </div>
+    </div>
+    <div class="quote-container">
+      <div class="quote"></div>
+      <div class="quote-wrapper">
+        <button class="change-quote"></button>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="open-settings-btn">
+      <span class="settings-button-text"></span> 
+      <img src="./assets/svg/settings.svg" alt="" class="settings-button-icon" draggable="false">
+    </div>
+    <div class="settings-container">
+      <div class="settings">
+        <div class="settings-header">
+          <div class="settings-title">Settings</div>
+          <button class="close-settings-btn"></button>
+        </div>
+        <div class="settings-main">
+          <div class="setting-item">
+            <div class="setting-name setting-change-language">Language</div>
+            <div class="setting-parameter">
+              <select class="languages settings-option">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+              </select>
+            </div>
+          </div>
+          <div class="setting-item">
+            <div class="setting-name setting-change-background">Background source</div>
+            <div class="setting-parameter ">
+              <select class="background-sources settings-option">
+                <option value="github">Github</option>
+                <option value="unsplash">Unsplash API</option>
+                <option value="flickr">Flickr API</option>
+              </select>
+              <div class="api-bg-category">
+                <span class="api-bg-category-label">Category:</span>
+                <input type="text" class="api-bg-category-input" placeholder="Enter category" value="nature" maxlength="25">
+              </div>
+              <span class="api-bg-category-error">* Enter category correctly</span>
+            </div>
+          </div>
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div class="setting-hide-widgets-main">Hide widgets</div>
+              <div class="setting-hide-widgets-item hide-time">Time</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="time-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div> 
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-date">Date</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="date-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-greeting">Greeting</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="greeting-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-weather">Weather</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="weather-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>  
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-music-player">Music player</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="music-player-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>     
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-quote">Quote of the day</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="quote-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>   
+          <div class="setting-item subitem">
+            <div class="setting-name setting-hide-widgets">
+              <div></div>
+              <div class="setting-hide-widgets-item hide-todo-list">Todo list</div>
+            </div>
+            <div class="setting-parameter">
+              <label class="form-switch">
+                <input type="checkbox" class="todo-list-checkbox">
+                <i></i>
+              </label>
+            </div>
+          </div>  
+          <div class="footer-legal">
+            <div class="footer-legal-text-main">Copyright © 2022 <span class="footer-legal-text-title">Momentum</span> All rights reserved.</div>
+            <div class="footer-legal-links">
+              <div class="footer-github"><a href="https://github.com/kornienkokostia" target="_blank"><img src="./assets/svg/github-logo.svg" alt="github-logo" class="footer-github-img"></a></div>
+              <div class="footer-rs-school"><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/momentum/momentum-stage1.md" target="_blank"><img src="./assets/svg/rs-school-logo.svg" alt="rs_school-logo" class="footer-rs-school-img"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
