@@ -3,10 +3,12 @@ import * as greet from '../js/greeting.js'
 const getRandomNum = () => Math.floor(Math.random() * 20) + 1
 
 const setBg = () => {
-    const timeOfDay = greet.timeOfDayEn
+    // const timeOfDay = greet.timeOfDayEn
+    const timeOfDay = 'morning'
     const bgNum = `${randomNum}`.padStart(2, "0")
     const img = new Image()
-    img.src = `https://raw.githubusercontent.com/kornienkokostia/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.webp`
+    // img.src = `https://raw.githubusercontent.com/kornienkokostia/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.webp`
+    img.src = `https://raw.githubusercontent.com/kornienkokostia/momentum/momentum/assets/bg/${timeOfDay}/${bgNum}.webp`
     img.addEventListener('load', () => {
         document.body.style.backgroundImage = `url(${img.src})`
         document.querySelector('.preloader').classList.add('hidden')
